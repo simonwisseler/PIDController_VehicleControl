@@ -1,4 +1,5 @@
 #include "PID.h"
+#include <iostream>
 
 /**
  * Constructor
@@ -26,6 +27,7 @@ void PID::Init(double Kp_, double Ki_, double Kd_) {
     
     // Previous cte.
     prev_cte = 0.0;
+    timestep = 0;
 }
 
 
@@ -43,6 +45,11 @@ void PID::UpdateError(double cte) {
     // Diferential error
     d_error = cte - prev_cte;
     prev_cte = cte;
+    
+    // print number of update steps to console to be able to determine length of one lap (in # of update steps)
+    // necessary to complete a full lap with each changed param to have a meaningful score for the parameter set
+    std::cout << "Timestep: " << update_step << std::endl;
+    update_step += 1;
 }
 
 
