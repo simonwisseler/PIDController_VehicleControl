@@ -39,12 +39,12 @@ int main() {
   // increase Kp until car starts oscillating
   // increase Kd until car stops oscillating
   // increase Ki to reduce steady-state error
-  pid.Init(0.08, 0.0, 1.5); //init values allow car to complete round
+  pid.Init(0.075, 0.00025, 1.5); //init values allow car to complete round
     
 
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, 
-                     uWS::OpCode opCode)
+                     uWS::OpCode opCode){
     // "42" at the start of the message means there's a websocket message event.
     // The 4 signifies a websocket message
     // The 2 signifies a websocket event
