@@ -1,3 +1,9 @@
+-----
+This repo contains a simple implementation of the PID control algorithm using Twiddle for parameter tuning. It is built on Udacity's Self-Driving Car Nanodegree CarND-PID-Control-Project.
+
+The description below comes from the original repo (https://github.com/udacity/CarND-PID-Control-Project.git).
+
+-----
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
