@@ -36,8 +36,9 @@ int main() {
   // initial values for Kp, Ki, Kd set using trial-and-error method
   // initial values let car reliably complete lap at throttle of 0.7
   // initial values can thus serve as input for automated parameter optimization algorithm like Twiddle
-  pid.Init(0.10, 0.00025, 3.0);
+  pid.Init(0.085, 0.00025, 3.0);
     
+  // TODO - Run Twiddle for x laps to determine fine-tuned Kp, Ki, Kd
   // twiddle update - throttle 0.7 - error ???
   // pid.Init(?,?,?)
     
